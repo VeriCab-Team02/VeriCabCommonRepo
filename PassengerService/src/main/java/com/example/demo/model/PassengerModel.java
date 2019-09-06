@@ -28,14 +28,6 @@ public class PassengerModel {
 	private String passengerGender;
 	private Long passengerPhoneNumber;
 	private String passengerEmail;
-	private String sourceLocation;
-	private Boolean passengerChoseDriver; //has to be set by passenger UI
-	private Boolean passengerChoseDriverWithCar; //has to be set by passenger UI's backend
-	private String carType; //if the passenger chose CarWithDriver... should be set null if passenger chose driver alone
-	private Long driverId;//if the passenger chose Driver or CarWithDriver
-	private Boolean passengerHasTrip;
-	private Boolean paymentHasCompleted;//needed so that the passenger is in payment page until it gets completed
-	private String dateOfTrip;
-	//Note: dateofpickup and timeofpickup will be packed into another custom class and sent to queue
+
 	
 }

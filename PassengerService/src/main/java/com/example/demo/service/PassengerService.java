@@ -18,7 +18,7 @@ public class PassengerService {
 		
 		//can be called by admin or passenger
 		public PassengerModel addPassenger(PassengerModel passenger) {
-			System.out.println(passenger.getPassengerHasTrip());
+			
 			return this.repo.save(passenger);
 		}
 		

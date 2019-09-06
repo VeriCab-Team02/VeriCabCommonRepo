@@ -3,9 +3,6 @@ package com.example.demo.controllers;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.stream.annotation.EnableBinding;
-import org.springframework.cloud.stream.messaging.Source;
-import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,22 +16,22 @@ import com.example.demo.model.PassengerModel;
 
 import com.example.demo.service.PassengerService;
 
-@EnableBinding(Source.class)
+
 @RestController
 public class PassengerController {
 	
 	@Autowired
 	public PassengerModel passenger;
 	
-	@Autowired
-	private Source source;
+
 	@Autowired
 	public PassengerService service;
 	
 	@PostMapping("/addPassengers")
-	public PassengerModel addPassengers(@Valid @RequestBody PassengerModel passenger) {
-		source.output().send(MessageBuilder.withPayload(passenger).build());
-		return this.service.addPassenger(passenger);
+	public boolean addPassengers(@Valid @RequestBody PassengerModel passenger) {
+		this.service.addPassenger(passenger);
+		
+		return true;
 	}
 	
 	@GetMapping("/viewPassengers")
