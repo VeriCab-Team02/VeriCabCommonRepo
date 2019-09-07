@@ -29,6 +29,7 @@ public class PassengerController {
 	
 	@PostMapping("/addPassengers")
 	public boolean addPassengers(@Valid @RequestBody PassengerModel passenger) {
+		
 		this.service.addPassenger(passenger);
 		
 		return true;
@@ -36,7 +37,7 @@ public class PassengerController {
 	
 	@GetMapping("/viewPassengers")
 	public Iterable<PassengerModel> findAllPassengers(){
-		System.out.println("get mapping in pass controller called");
+		//System.out.println("get mapping in pass controller called");
 		return this.service.viewPassengers();
 	}
 	
@@ -47,9 +48,10 @@ public class PassengerController {
 	}
 	
 	@DeleteMapping("/deletePassenger/{id}")
-	public void deletePassenger(@PathVariable(value="id") long id) {
+	public boolean deletePassenger(@PathVariable(value="id") long id) {
 		
 		this.service.deletePassenger(id);
+		return true;
 	}
 
 }
