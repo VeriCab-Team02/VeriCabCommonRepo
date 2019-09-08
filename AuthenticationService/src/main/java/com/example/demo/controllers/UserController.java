@@ -45,7 +45,7 @@ public class UserController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @GetMapping("/user/me")
-    @PreAuthorize("hasRole('USER')")
+    //@PreAuthorize("hasRole('USER')")
     public UserSummary getCurrentUser(@CurrentUser UserPrincipal currentUser) {
         UserSummary userSummary = new UserSummary(currentUser.getId(), currentUser.getUsername(), currentUser.getName());
         return userSummary;
@@ -64,18 +64,19 @@ public class UserController {
     }
 
     //DONT DELETE THIS.. THIS MIGHT BE USEFUL LATER
-//    @GetMapping("/users/{username}")
-//    public UserProfile getUserProfile(@PathVariable(value = "username") String username) {
-//        User user = userRepository.findByUsername(username)
-//                .orElseThrow(() -> new ResourceNotFoundException("User", "username", username));
-//
-//        long pollCount = pollRepository.countByCreatedBy(user.getId());
-//        long voteCount = voteRepository.countByUserId(user.getId());
-//
-//        UserProfile userProfile = new UserProfile(user.getId(), user.getUsername(), user.getName(), user.getCreatedAt(), pollCount, voteCount);
-//
-//        return userProfile;
-//    }
+    @PreAuthorize("hasRole('USER')")
+    @GetMapping("/users/{username}")
+    public UserProfile getUserProfile(@PathVariable(value = "username") String username) {
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new ResourceNotFoundException("User", "username", username));
+
+      //  long pollCount = pollRepository.countByCreatedBy(user.getId());
+      //  long voteCount = voteRepository.countByUserId(user.getId());
+
+        UserProfile userProfile = new UserProfile(user.getId(), user.getUsername(), user.getName(), user.getCreatedAt());
+
+        return userProfile;
+    }
 
 //    @GetMapping("/users/{username}/polls")
 //    public PagedResponse<PollResponse> getPollsCreatedBy(@PathVariable(value = "username") String username,
