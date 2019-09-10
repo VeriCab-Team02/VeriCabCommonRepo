@@ -1,0 +1,82 @@
+{
+  "test": [
+    {
+      "id": 1,
+      "Name": "Aditya",
+      "detail1": "O+",
+      "detail2": "9852365475",
+      "avatar_url": "Chennai"
+    },
+    {
+      "id": 2,
+      "Name": "Sidharth",
+      "detail1": "O+",
+      "detail2": "8965741256",
+      "avatar_url": "Delhi"
+    },
+    {
+      "id": 3,
+      "Name": "Karan",
+      "detail1": "O+",
+      "detail2": "7854125689",
+      "avatar_url": "Bengaluru"
+    },
+    {
+      "id": 4,
+      "Name": "Lakshit",
+      "detail1": "O+",
+      "detail2": "9854125689",
+      "avatar_url": "Ahemdabad"
+    },
+    {
+      "id": 5,
+      "Name": "Kartik",
+      "detail1": "O-",
+      "detail2": "8745896521",
+      "avatar_url": "Delhi"
+    },
+    {
+      "id": 6,
+      "Name": "Harish",
+      "detail1": "O-",
+      "detail2": "7854125639",
+      "avatar_url": "Jaipur"
+    },
+    {
+      "id": 7,
+      "Name": "Naveen",
+      "detail1": "O-",
+      "detail2": "6854123589",
+      "avatar_url": "Bikaner"
+    },
+    {
+      "id": 8,
+      "Name": "Mohit",
+      "detail1": "O-",
+      "detail2": "9854745214",
+      "avatar_url": "Mumbai"
+    },
+    {
+      "id": 9,
+      "Name": "Sumit",
+      "detail1": "A+",
+      "detail2": "9658745236",
+      "avatar_url": "Jaipur"
+    },
+    {
+      "id": 10,
+      "Name": "Ram",
+      "detail1": "A+",
+      "detail2": "8547523695",
+      "avatar_url": "Lucknow"
+    },
+    {
+      "passengerId": "56",
+      "passengerName": "Rahane",
+      "passengerGender": "M",
+      "passengerPhoneNumber": "45",
+      "passengerEmail": "rh@gmail.com",
+      "id": 11
+    }
+  ]
+}
