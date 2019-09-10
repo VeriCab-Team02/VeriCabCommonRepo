@@ -1,0 +1,41 @@
+
+.trial1_wrapper{
+    background-image: url("../cab1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+.cardStyle {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cardBodyStyle {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.PlaceLeft {
+    text-align: left;
+   
+}
+
+.PlaceRight {
+    text-align: right;
+}
+
+.LicenseInfoStyle {
+    text-align: left;
+    font-size: smaller;
+    text-decoration: none;
+    color: grey;
+    font-style: italic;
+    font-weight: 500;
+
+}
+
+.trashStyle{
+    background: none;
+    border: none;
+     
+}
